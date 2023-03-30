@@ -158,3 +158,29 @@ arraylist.c:22:1: error: control reaches end of non-void function [-Werror=retur
 cc1: all warnings being treated as errors
 Compilation failed
 20bce2e
+Thu 30 Mar 2023 03:52:32 PM UTC: 
+ arraylist.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+arraylist.c: In function ‘createList’:
+arraylist.c:17:8: error: array subscript ‘ArrayList {aka struct ArrayList}[0]’ is partly outside array bounds of ‘unsigned char[8]’ [-Werror=array-bounds]
+   17 |   lista->capacity = 2;
+      |        ^~
+arraylist.c:15:35: note: referencing an object of size 8 allocated by ‘malloc’
+   15 |   ArrayList *lista = (ArrayList *)malloc(sizeof(void *));
+      |                                   ^~~~~~~~~~~~~~~~~~~~~~
+arraylist.c:18:8: error: array subscript ‘ArrayList {aka struct ArrayList}[0]’ is partly outside array bounds of ‘unsigned char[8]’ [-Werror=array-bounds]
+   18 |   lista->size = 0;
+      |        ^~
+arraylist.c:15:35: note: referencing an object of size 8 allocated by ‘malloc’
+   15 |   ArrayList *lista = (ArrayList *)malloc(sizeof(void *));
+      |                                   ^~~~~~~~~~~~~~~~~~~~~~
+arraylist.c:19:8: error: array subscript ‘ArrayList {aka struct ArrayList}[0]’ is partly outside array bounds of ‘unsigned char[8]’ [-Werror=array-bounds]
+   19 |   lista->data = (void **) malloc(sizeof(void *));
+      |        ^~
+arraylist.c:15:35: note: referencing an object of size 8 allocated by ‘malloc’
+   15 |   ArrayList *lista = (ArrayList *)malloc(sizeof(void *));
+      |                                   ^~~~~~~~~~~~~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+4994d9d
