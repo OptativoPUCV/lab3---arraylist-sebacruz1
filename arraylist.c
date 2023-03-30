@@ -106,6 +106,6 @@ void clean(ArrayList * l)
   {
     pop(l, i);
     free(l->data[i]);
-    l->size--;
   } 
+  l->size = 0;
 }
