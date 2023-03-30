@@ -104,7 +104,7 @@ void clean(ArrayList * l)
 {
   for (int i = 0; i <= l->size; i++)
   {
-    pop(l, l->data[i]);
+    pop(l, i);
     free(l->data[i]);
     l->size--;
   } 
