@@ -13,6 +13,7 @@ typedef struct ArrayList {
 ArrayList *createList(void) 
 {
   ArrayList *lista = malloc(sizeof(ArrayList);
+  assert(lista != NULL);
   
   return lista;
 }
