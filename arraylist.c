@@ -102,7 +102,7 @@ int get_size(ArrayList * l)
 //remove elements
 void clean(ArrayList * l)
 {
-  for (int i = 0; i <= l->size; i++)
+  for (int i = 0; i < l->size; i++)
   {
     pop(l, i);
     free(l->data[i]);
