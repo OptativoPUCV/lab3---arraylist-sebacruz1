@@ -298,3 +298,19 @@ Thu 30 Mar 2023 07:49:03 PM UTC:
  tests:  11|1
 total_score: 50/70
 c256a2c
+Thu 30 Mar 2023 07:50:10 PM UTC: 
+ arraylist.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+arraylist.c: In function ‘clean’:
+arraylist.c:107:19: error: passing argument 2 of ‘pop’ makes integer from pointer without a cast [-Werror=int-conversion]
+  107 |     pop(l, l->data[i]);
+      |            ~~~~~~~^~~
+      |                   |
+      |                   void *
+arraylist.c:54:30: note: expected ‘int’ but argument is of type ‘void *’
+   54 | void* pop(ArrayList * l, int i)
+      |                          ~~~~^
+cc1: all warnings being treated as errors
+Compilation failed
+8052902
