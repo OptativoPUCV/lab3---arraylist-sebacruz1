@@ -196,3 +196,14 @@ Thu 30 Mar 2023 04:07:43 PM UTC:
  tests:  3|4
 total_score: 20/70
 4a6e102
+Thu 30 Mar 2023 04:22:01 PM UTC: 
+ arraylist.c | 16 +++++++++++++++-
+ 1 file changed, 15 insertions(+), 1 deletion(-)
+In file included from test.c:5:
+arraylist.c: In function ‘push’:
+arraylist.c:47:26: error: ‘k’ undeclared (first use in this function)
+   47 |     l->data[j] = l->data[k + 1];
+      |                          ^
+arraylist.c:47:26: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+ec213e9
