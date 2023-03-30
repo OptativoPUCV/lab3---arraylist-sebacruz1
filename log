@@ -117,3 +117,23 @@ arraylist.c:37:5: error: ‘get_size’ defined but not used [-Werror=unused-fun
 cc1: all warnings being treated as errors
 Compilation failed
 df7c0c5
+Thu 30 Mar 2023 03:51:50 PM UTC: 
+ arraylist.c | 7 +++++--
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+In file included from test.c:5:
+arraylist.c: In function ‘createList’:
+arraylist.c:15:56: error: expected ‘)’ before ‘;’ token
+   15 |   ArrayList *lista = (ArrayList *)malloc(sizeof(void *);
+      |                                         ~              ^
+      |                                                        )
+test.c:434:1: error: expected declaration or statement at end of input
+  434 | }
+      | ^
+In file included from test.c:5:
+arraylist.c:15:14: error: unused variable ‘lista’ [-Werror=unused-variable]
+   15 |   ArrayList *lista = (ArrayList *)malloc(sizeof(void *);
+      |              ^~~~~
+test.c:435: error: control reaches end of non-void function [-Werror=return-type]
+cc1: all warnings being treated as errors
+Compilation failed
+aa86ea9
