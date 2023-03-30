@@ -28,9 +28,8 @@ void append(ArrayList * l, void * data)
     l->capacity *= 2;
     l->data = realloc(l->data, l->capacity);
   }
-l->data[l->size] = data;
-l->size++;
-
+  l->data[l->size] = data;
+  l->size++;
 }
 
 void push(ArrayList * l, void * data, int i)
@@ -52,8 +51,38 @@ void push(ArrayList * l, void * data, int i)
   
 }
 
-void* pop(ArrayList * l, int i){
-    return NULL;
+void* pop(ArrayList * l, int i)
+{
+  void **dato = 0;
+  if (i >= 0)
+  {
+    dato = l->data[i];
+    for (int j = i; j < l->size - 1; j++)
+      {
+        l->data[j] = l->data[j + 1];
+      }
+  }
+
+  if (i < 0)
+  {
+    int pos = 0;
+    
+    for (int j = l->size; j >= i; j--)
+    {
+      if (j == i)
+      {
+        pos = j; 
+      }
+    }
+    
+    dato = l->data[pos];
+    
+    for (int j = pos; j < l->size - 1; j++)
+    {
+      l->data[j] = l->data[j + 1];
+    }
+  }
+  return dato;
 }
 
 void* get(ArrayList * l, int i){
