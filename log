@@ -268,3 +268,9 @@ Thu 30 Mar 2023 07:39:20 PM UTC:
  tests:  8|2
 total_score: 40/70
 a465be2
+Thu 30 Mar 2023 07:39:44 PM UTC: 
+ arraylist.c | 11 +----------
+ 1 file changed, 1 insertion(+), 10 deletions(-)
+ tests:  8|2
+total_score: 40/70
+265bdc9
